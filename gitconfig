@@ -1,0 +1,8 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[push]
+	default = simple
+[user]
+	email = lbh0307@kaist.ac.kr
+	name = lbh0307
