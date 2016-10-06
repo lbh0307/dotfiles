@@ -4,6 +4,8 @@ if [[ ! -d "$HOME/.zplug" ]]; then
   ln -s "$HOME/.zplug/repos/zplug/zplug/init.zsh" "$HOME/.zplug/init.zsh"
 fi
 
+export ZSH=/home/lbh/.zplug/repos/robbyrussell/oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 source $HOME/.zplug/init.zsh
 
 zplug "zplug/zplug"
@@ -14,10 +16,10 @@ zplug "zsh-users/zsh-history-substring-search", nice:10
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
 fi
 
 zplug load
@@ -50,19 +52,6 @@ if [ -f "$HOME/.zshrc.local" ]; then
 fi
 
 # Alias
-ls --color -d . &> /dev/null && alias ls='ls --color=auto' || alias ls='ls -G'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias ll='ls -lh'
-alias la='ls -alh'
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
-alias cd.....='cd ../../../..'
-alias cd......='cd ../../../../..'
-
 alias tn='tmux new-session'
 alias ta='tmux attach-session'
 alias tls='tmux list-session'
