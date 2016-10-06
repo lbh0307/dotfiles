@@ -22,10 +22,10 @@ if ! zplug check --verbose; then
   fi
 fi
 
-zplug load
-
-LIME_SHOW_HOSTNAME=0
+LIME_SHOW_HOSTNAME=1
 LIME_DIR_DISPLAY_COMPONENTS=3
+
+zplug load
 
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
