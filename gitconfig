@@ -3,6 +3,5 @@
 	editor = vim
 [push]
 	default = simple
-[user]
-	email = lbh0307@kaist.ac.kr
-	name = Byeonghak Lee
+[include]
+	path = ~/.gitconfig.local
