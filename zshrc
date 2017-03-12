@@ -30,7 +30,7 @@ zplug load
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
-LS_COLORS=$LS_COLORS:'di=1;94'
+LS_COLORS='di=1;94:'
 export LS_COLORS
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
