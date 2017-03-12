@@ -155,6 +155,9 @@ augroup vimrc
   autocmd FileType python map <F5> :w<CR>:!python %<CR>
   autocmd FileType python imap <F5> <Esc>:w<CR>:!python %<CR>
 
+  " sage
+  autocmd FileType sage.python map <F5> :w<CR>:!sage %<CR>
+
   " Tex
   autocmd FileType tex map <F5> :w<CR>:make <CR>
 augroup END
