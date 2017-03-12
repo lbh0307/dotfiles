@@ -38,7 +38,7 @@ let g:syntastic_quiet_messages = { "level": "warnings" }
 
 " jedi-vim
 autocmd FileType python setlocal completeopt-=preview
-" let g:jedi#show_call_signatures = "1"
+let g:jedi#show_call_signatures = "0"
 
 " Nerd-tree
 autocmd VimEnter * NERDTree | wincmd p
