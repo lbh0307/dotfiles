@@ -41,6 +41,9 @@ autocmd FileType python setlocal completeopt-=preview
 let g:jedi#show_call_signatures = "0"
 
 " Nerd-tree
+" let g:NERDTreeDirArrows=0
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 autocmd VimEnter * NERDTree | wincmd p
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 " Close all open buffers on entering a window if the only
