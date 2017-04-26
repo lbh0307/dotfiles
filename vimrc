@@ -36,8 +36,14 @@ let g:syntastic_ignore_extensions = '\c\v^([gx]?z|lzma|bz2|sage)$'
 let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "level": "warnings" }
 
+" set for python3
+if has("autocmd")
+  au BufNewFile,BufRead *.py3 set filetype=python
+endif
+
 " jedi-vim
 autocmd FileType python setlocal completeopt-=preview
+let g:jedi#force_py_version = 2
 let g:jedi#show_call_signatures = "0"
 
 " Nerd-tree
@@ -164,3 +170,10 @@ augroup vimrc
   " Tex
   autocmd FileType tex map <F5> :w<CR>:make <CR>
 augroup END
+
+" set for python3
+if has("autocmd")
+  au BufNewFile,BufRead *.py3 let g:jedi#force_py_version = 3
+  au BufNewFile,BufRead *.py3 map <F5> :w<CR>:!python3 %<CR>
+  au BufNewFile,BufRead *.py3 imap <F5> <Esc>:w<CR>:!python3 %<CR>
+endif
