@@ -44,7 +44,7 @@ function add_to_path_once()
 
 # Set PATH to include user's bin if it exists
 if [ -d "$HOME/bin" ]; then
-  export PATH = "$HOME/bin:$PATH"
+  export PATH="$HOME/bin:$PATH"
 fi
 
 if [ -f "$HOME/.zshrc.local" ]; then
