@@ -70,10 +70,9 @@ alias gpl='git pull'
 alias glg='git log --graph --decorate'
 alias gd='git diff'
 
-# Vim
-alias v='vim.nox-py2'
-alias vi='vim.nox-py2'
-alias vim='vim.nox-py2'
+# vim
+alias v=vim
+alias vi=vim
 
 # http://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized
 function man() {
