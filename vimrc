@@ -166,9 +166,6 @@ augroup vimrc
 
   " sage
   autocmd FileType sage.python map <F5> :w<CR>:!sage %<CR>
-
-  " Tex
-  autocmd FileType tex map <F5> :w<CR>:make <CR>
 augroup END
 
 " set for python3
