@@ -43,7 +43,6 @@ endif
 
 " jedi-vim
 autocmd FileType python setlocal completeopt-=preview
-let g:jedi#force_py_version = 2
 let g:jedi#show_call_signatures = "0"
 
 " Nerd-tree
@@ -161,16 +160,16 @@ augroup vimrc
         \ endif
 
   " Python
-  autocmd FileType python map <F5> :w<CR>:!python %<CR>
-  autocmd FileType python imap <F5> <Esc>:w<CR>:!python %<CR>
+  autocmd FileType python map <F5> :w<CR>:!python3 %<CR>
+  autocmd FileType python imap <F5> <Esc>:w<CR>:!python3 %<CR>
 
   " sage
   autocmd FileType sage.python map <F5> :w<CR>:!sage %<CR>
 augroup END
 
 " set for python3
-if has("autocmd")
-  au BufNewFile,BufRead *.py3 let g:jedi#force_py_version = 3
-  au BufNewFile,BufRead *.py3 map <F5> :w<CR>:!python3 %<CR>
-  au BufNewFile,BufRead *.py3 imap <F5> <Esc>:w<CR>:!python3 %<CR>
-endif
+" if has("autocmd")
+"   au BufNewFile,BufRead *.py3 let g:jedi#force_py_version = 3
+"   au BufNewFile,BufRead *.py3 map <F5> :w<CR>:!python3 %<CR>
+"   au BufNewFile,BufRead *.py3 imap <F5> <Esc>:w<CR>:!python3 %<CR>
+" endif
