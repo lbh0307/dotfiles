@@ -3,6 +3,7 @@
 ## Requirements
 
 - [Git](http://git-scm.com)
+- [flake8](https://pypi.python.org/pypi/flake8)
 
 ## Install
 

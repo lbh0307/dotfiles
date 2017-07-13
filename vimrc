@@ -35,6 +35,9 @@ call plug#end()
 let g:syntastic_ignore_extensions = '\c\v^([gx]?z|lzma|bz2|sage)$'
 let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "level": "warnings" }
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_exec = 'python3'
+let g:syntastic_python_flake8_args = ['-m', 'flake8']
 
 " set for python3
 if has("autocmd")
