@@ -4,7 +4,12 @@ if [[ ! -d "$HOME/.zplug" ]]; then
   ln -s "$HOME/.zplug/repos/zplug/zplug/init.zsh" "$HOME/.zplug/init.zsh"
 fi
 
-export ZSH=/home/lbh/.zplug/repos/robbyrussell/oh-my-zsh
+# check if oh-my-zsh installed
+if [[ ! -d "$HOME/.zplug/repos/robbyrussell/oh-my-zsh" ]]; then
+  git clone https://github.com/robbyrussell/oh-my-zsh "$HOME/.zplug/repos/robbyrussell/oh-my-zsh"
+fi
+
+export ZSH=$HOME/.zplug/repos/robbyrussell/oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zplug/init.zsh
 
