@@ -36,8 +36,12 @@ zplug load
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
-LS_COLORS='di=1;94:'
-export LS_COLORS
+# Better DIR color
+export LS_COLORS="di=1;;94:"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+autoload -Uz compinit
+compinit
+
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
 
