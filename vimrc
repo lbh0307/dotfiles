@@ -43,13 +43,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_exec = 'python3'
-let g:syntastic_python_flake8_args = ['-m', 'flake8']
-
-" set for python3
-if has("autocmd")
-  au BufNewFile,BufRead *.py3 set filetype=python
-endif
 
 " jedi-vim
 autocmd FileType python setlocal completeopt-=preview
@@ -170,16 +163,9 @@ augroup vimrc
         \ endif
 
   " Python
-  autocmd FileType python map <F5> :w<CR>:!python3 %<CR>
-  autocmd FileType python imap <F5> <Esc>:w<CR>:!python3 %<CR>
+  autocmd FileType python map <F5> :w<CR>:!python %<CR>
+  autocmd FileType python imap <F5> <Esc>:w<CR>:!python %<CR>
 
   " sage
   autocmd FileType sage.python map <F5> :w<CR>:!sage %<CR>
 augroup END
-
-" set for python3
-" if has("autocmd")
-"   au BufNewFile,BufRead *.py3 let g:jedi#force_py_version = 3
-"   au BufNewFile,BufRead *.py3 map <F5> :w<CR>:!python3 %<CR>
-"   au BufNewFile,BufRead *.py3 imap <F5> <Esc>:w<CR>:!python3 %<CR>
-" endif
