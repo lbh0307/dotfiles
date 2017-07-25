@@ -16,9 +16,9 @@ source $HOME/.zplug/init.zsh
 zplug "zplug/zplug"
 zplug "djui/alias-tips"
 zplug "yous/lime"
-zplug "zsh-users/zsh-syntax-highlighting", nice:9
-zplug "zsh-users/zsh-history-substring-search", nice:10
 zplug "Tarrasch/zsh-autoenv"
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "zsh-users/zsh-history-substring-search", defer:3
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
