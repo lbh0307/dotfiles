@@ -1,4 +1,22 @@
+# vim
 *.swp
 *.swo
+
+# python
 *.pyc
+__pycache__/
+
+# sage
 *.sage.py
+
+# pyenv
+.python-version
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# autoenv
+.autoenv.zsh
+.autoenv_leave.zsh
