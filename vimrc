@@ -74,11 +74,11 @@ syntax on
 set number
 set background=dark
 set backspace=2
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set scrolloff=4
-set noexpandtab
+set expandtab
 set smartindent
 set nowrap
 set undolevels=1000
@@ -90,11 +90,10 @@ set showmatch
 " set for tex
 if has("autocmd")
   au BufReadPost .tex set filetype=tex
-  au filetype tex set shiftwidth=2
-  au filetype tex set tabstop=2
-  au filetype tex set softtabstop=2
   au filetype tex set grepprg=grep\ -nH\ $*
   au filetype tex set ai
+  au FileType c,cpp,java,json,markdown,perl,python
+      \ setlocal softtabstop=4 shiftwidth=4 tabstop=6
 endif
 
 colorscheme hybrid
