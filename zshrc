@@ -61,6 +61,13 @@ if [ -f "$HOME/.zshrc.local" ]; then
   source $HOME/.zshrc.local
 fi
 
+# pyenv with virtualenv plugin
+if [ -d "$HOME/.pyenv" ]; then
+  export PATH="$HOME/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
 # tmux
 alias tn='tmux new-session'
 alias ta='tmux attach-session'
