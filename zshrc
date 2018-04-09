@@ -37,7 +37,7 @@ export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
 # Better DIR color
-export LS_COLORS="di=1;;94:"
+export LS_COLORS="di=1;;94:*.tar=00;31:*.gz=00;31:*.zip=00;31"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 autoload -Uz compinit
 compinit
