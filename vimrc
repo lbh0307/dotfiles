@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline'
 " Languages
 Plug 'scrooloose/syntastic'
 Plug 'davidhalter/jedi-vim'
+  Plug 'lambdalisue/vim-pyenv'
 Plug 'petRUShka/vim-sage'
 Plug 'lervag/vimtex', { 'for': ['bib', 'tex'] }
 
@@ -42,7 +43,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "level": "warnings" }
-let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_cpp_compiler_options = '-std=c++11'
+" let g:syntastic_python_checkers = ['flake8']
 
 " jedi-vim
 autocmd FileType python setlocal completeopt-=preview
@@ -161,9 +163,11 @@ augroup vimrc
         \   setlocal makeprg=g++\ -o\ %< |
         \ endif
 
-  " Python
+  " Python 2, 3
   autocmd FileType python map <F5> :w<CR>:!python %<CR>
   autocmd FileType python imap <F5> <Esc>:w<CR>:!python %<CR>
+  autocmd FileType python map <F6> :w<CR>:!python3 %<CR>
+  autocmd FileType python imap <F6> <Esc>:w<CR>:!python3 %<CR>
 
   " sage
   autocmd FileType sage.python map <F5> :w<CR>:!sage %<CR>
