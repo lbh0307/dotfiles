@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline'
 " Languages
 Plug 'scrooloose/syntastic'
 Plug 'davidhalter/jedi-vim'
-  Plug 'lambdalisue/vim-pyenv'
+  " Plug 'lambdalisue/vim-pyenv'
 Plug 'petRUShka/vim-sage'
 Plug 'lervag/vimtex', { 'for': ['bib', 'tex'] }
 
