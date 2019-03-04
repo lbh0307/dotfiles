@@ -15,8 +15,8 @@ cd .dotfiles
 ```
 
 Available commands:
- - update    Update installed packages
- - base      Install basic packages
- - link      Install symbolic links
- - github    Install github account
- - apache    Install apache, mysql, php7.2
+ - update : Update installed packages
+ - base : Install basic packages
+ - link : Install symbolic links
+ - github : Install github account
+ - apache : Install apache, mysql, php7.2
